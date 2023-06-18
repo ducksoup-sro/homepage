@@ -59,6 +59,7 @@ copyright: |
 nav:
   - Home:
     - Home: index.md
+    - Changelog: changelog.md
     - Getting started:
         - "getting-started/README.md"
         - "getting-started/linux.md"
