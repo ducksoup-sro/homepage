@@ -1,0 +1,79 @@
+site_name: DuckSoup
+site_url: https://ducksoup.cc/
+docs_dir: ./docs
+
+repo_url: https://github.com/ducksoup-sro/ducksoup
+
+theme:
+  name: material
+  highlightjs: true
+  titles_only: true
+  features:
+    - navigation.expand
+    - navigation.indexes
+    - navigation.tabs
+    - toc.follow
+  palette:
+  - scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+  - scheme: default
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+
+watch: ['docs','mkdocs.yml']
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - search
+  - awesome-pages
+  - roamlinks
+  - git-authors
+
+extra:
+  generator: false
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/ducksoup-sro"  target="_blank" rel="noopener">DuckSoup Community</a>
+
+nav:
+  - Home:
+    - Home: index.md
+    - Getting started:
+        - "getting-started/README.md"
+        - "getting-started/linux.md"
+        - "getting-started/windows.md"
+    - Features: features.md
+    - Guides:
+        - "guides/README.md"
+        - Database Migrations: "guides/db-migrations.md"
+    - Development:
+        - "development/README.md"
+        - "development/beginner-custom-plugin.md"
+        - "development/beginner-custom-event.md"
+        - "development/beginner-custom-packet.md"
+    - contributing.md
+    - license.md
+  - Discord: "https://discord.com/invite/83wscHkmmT"
+  - Filter GitHub: "https://github.com/ducksoup-sro/ducksoup"
+  - Plugin GitHub: "https://github.com/ducksoup-sro/plugins"
